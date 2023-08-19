@@ -33,7 +33,7 @@ public class MyMoviePlanApplication implements CommandLineRunner  {
 		try {
 		User user = new User();
 		
-		user.setFirstName("Anand");
+		user.setFirstName("Anand S");
 		user.setLastName("Rawat");
 		user.setUsername("anemo");
 		user.setPassword(this.bCryptPasswordEncoder.encode("qazwsxedc"));
