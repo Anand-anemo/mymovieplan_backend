@@ -72,7 +72,23 @@ public class MySecurityConfig extends WebSecurityConfigurerAdapter {
 		    		  "/genre/{gid}",
 		    		  "/ticket/",
 		    		  "/movies/*",
-		    		  "/movies/movietheatres/").permitAll()
+		    		  "/movies/movietheatres/",
+		    		  "/theatre/{tid}/shows/add",
+		    		  "/theatre/{tid}/show/all",
+		    		  "/theatre/{tid}/show/{showid}/movieShow/add",
+		    		  "/theatre/{tid}/show/{showid}",
+		    		  "/show/{show_id}",
+		    		  "/show/{show_id}/movie-show/all",
+		    		  "/movieshow/{movie_show_id}",
+		    		  "/movieshow/now-playing-up-coming",
+		    		  "/movies/now-playing-up-coming",
+		    		  "/movieshow/now-playing",
+		    		  "/theatre/movie/{movieid}",
+		    		  "/theatre/{auditorium_id}/movie/{movieId}",
+		    		  "/theatre/{auditorium_id}/show/{show_id}/movie-show/{movie_show_id}/booking/add",
+		    		  "/theatre/{auditorium_id}/show/{show_id}/movie-show/{movie_show_id}",
+		    		  "/movieshow/{movie_show_id}/booked-seats/{on}",
+		    		  "/booking/{username}/all").permitAll()
 		      .antMatchers(HttpMethod.OPTIONS).permitAll()
 		      .anyRequest().authenticated()
 		      .and()

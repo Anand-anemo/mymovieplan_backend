@@ -18,6 +18,11 @@ public class TheaterServiceImpl implements TheatreService {
 	@Override
 	public Theatre addTheatre(Theatre theatre) {
 		
+//		for(Shows show:theatre.getShows()) {
+//			show.setTheatre(theatre);
+//		}
+//		theatre.setShows(theatre.getShows());
+		
 		return this.theatreRepository.save(theatre);
 	}
 

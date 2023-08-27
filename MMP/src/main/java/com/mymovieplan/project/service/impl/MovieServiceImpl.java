@@ -1,13 +1,11 @@
 package com.mymovieplan.project.service.impl;
 
 import java.util.List;
-import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.mymovieplan.project.model.movie.Movies;
-import com.mymovieplan.project.model.movie.Theatre;
 import com.mymovieplan.project.repository.MoviesRepository;
 import com.mymovieplan.project.repository.TheatreRepository;
 import com.mymovieplan.project.service.MovieService;
@@ -76,17 +74,7 @@ public class MovieServiceImpl implements MovieService{
 		
 	}
 
-	@Override
-	public Movies assignTheatreToMovie(int movieid, int tid) {
-		Set<Theatre>theatreSet = null;
-		Movies movies = moviesRepo.findById(movieid).get();
-		Theatre theatre = theatreRepo.findById(tid).get();
-		
-	    theatreSet= movies.getMovieTheatre();
-		theatreSet.add(theatre);
-		movies.setMovieTheatre(theatreSet);
-		return this.moviesRepo.save(movies);
-	}
+	
 
 	
 
